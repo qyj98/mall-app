@@ -27,14 +27,6 @@ export default {
   watch: {
     $route(to, from) {
       // ?直接写transitionName会导致原始页面变空白再出现过渡动画，给一个变量back表示过度方式
-      // if (to.name === 'Classify' && from.name === 'Search') {
-      //   // this.$router.back = true;
-      //   this.transitionName = 'right';
-      // } else if (to.name === 'Search' && from.name === 'Classify') {
-      //   this.transitionName = 'left';
-      // } else {
-      //   this.transitionName = '';
-      // }
       if (to.name === 'Classify' && from.name === 'Search') {
         this.$router.back = 'toSearch';
       } else if (to.name === 'Search' && from.name === 'Classify') {
